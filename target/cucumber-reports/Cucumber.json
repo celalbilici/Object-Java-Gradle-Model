@@ -1,1 +1,114 @@
-[]
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#language:tr"
+      }
+    ],
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Kullanici girisi yapilarak sepete urun eklenmesi hepsiburada",
+        "description": "",
+        "id": "hepsiburada-test;kullanici-girisi-yapilarak-sepete-urun-eklenmesi-hepsiburada",
+        "type": "scenario",
+        "keyword": "Senaryo",
+        "steps": [
+          {
+            "result": {
+              "duration": 9475561600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Hepsiburada sayfasini \"https://www.hepsiburada.com/\" acalim",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.hepsiburada.com/",
+                  "offset": 23
+                }
+              ],
+              "location": "RegisterStep.hepsiburadaSayfasiniAcalim(String)"
+            },
+            "keyword": "Diyelim ki "
+          },
+          {
+            "result": {
+              "duration": 5760143570,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "\"Giriş Yap\" secenegine tiklanir",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Giriş Yap",
+                  "offset": 1
+                }
+              ],
+              "location": "RegisterStep.secenegineTiklanir(String)"
+            },
+            "keyword": "Ve "
+          },
+          {
+            "result": {
+              "duration": 273245615,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"email\" alanına \"deneme@gmail.com\" yazılır",
+            "match": {
+              "arguments": [
+                {
+                  "val": "email",
+                  "offset": 1
+                },
+                {
+                  "val": "deneme@gmail.com",
+                  "offset": 17
+                }
+              ],
+              "location": "RegisterStep.alanınaYazılır(String,String)"
+            },
+            "keyword": "Ve "
+          },
+          {
+            "result": {
+              "duration": 234090457,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"password\" alanına \"test.123\" yazılır",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password",
+                  "offset": 1
+                },
+                {
+                  "val": "test.123",
+                  "offset": 20
+                }
+              ],
+              "location": "RegisterStep.alanınaYazılır(String,String)"
+            },
+            "keyword": "Ve "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@register"
+          }
+        ]
+      }
+    ],
+    "name": "Hepsiburada test",
+    "description": "",
+    "id": "hepsiburada-test",
+    "keyword": "Özellik",
+    "uri": "Register.feature"
+  }
+]

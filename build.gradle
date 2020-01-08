@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.0.5.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.7.RELEASE'
 }
 
 group 'newGradleProject'
@@ -10,6 +12,10 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
 }
+bootJar {
+    mainClassName = 'hello.App'
+}
+
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
@@ -22,6 +28,24 @@ dependencies {
     testCompile group: 'info.cukes', name: 'cucumber-picocontainer', version: '1.2.4'
     compile group: 'info.cukes', name: 'cucumber-jvm', version: '1.2.4', ext: 'pom'
     compile group: 'info.cukes', name: 'cucumber-jvm-deps', version: '1.0.3'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
+    implementation 'org.springframework.boot:spring-boot-dependencies:2.0.5.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    components {
+        withModule('org.springframework:spring-beans') {
+            allVariants {
+                withDependencyConstraints {
+                    // Need to patch constraints because snakeyaml is an optional dependency
+                    it.findAll { it.name == 'snakeyaml' }.each { it.version { strictly '1.19' } }
+                }
+            }
+        }
+    }
+
+
 
 
 

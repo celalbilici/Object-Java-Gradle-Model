@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" time="0">
-<testcase classname="dummy" name="dummy">
-<skipped message="No features found"/>
-</testcase>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="15.743041">
+    <testcase classname="Hepsiburada test" name="Kullanici girisi yapilarak sepete urun eklenmesi hepsiburada" time="15.743041">
+        <system-out>
+            <![CDATA[Diyelim ki Hepsiburada sayfasini "https://www.hepsiburada.com/" acalim......passed
+Ve "Giriş Yap" secenegine tiklanir..........................................passed
+Ve "email" alanına "deneme@gmail.com" yazılır...............................passed
+Ve "password" alanına "test.123" yazılır....................................passed
+]]>
+        </system-out>
+    </testcase>
 </testsuite>

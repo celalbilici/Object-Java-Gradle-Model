@@ -12,7 +12,7 @@ public  class BaseStep  {
 
     public BaseStep()
     {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\celal\\Desktop\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
